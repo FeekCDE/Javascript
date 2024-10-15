@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Type your ToDo here" id="todo">
+    <button onclick="submitTodo()">Submit</button>
+    <p id="listt"></p>
+    
+    <script>
+
+        let todoArray = []
+        function submitTodo() {
+            if(todo.value == ''){
+                alert('Haaba nah, at all at all nah hin bad nah')
+            }
+            else{
+            todoArray.push(todo.value)
+            console.log(todoArray)
+            }
+        }
+
+
+
+        let class1 = ['shade', 1, {'pencil': '1'}, ['shade01']]
+
+        console.log(class1[3])
+
+        let class2 = ['Mary', 'clement', 'Tao', 'david', 'fuad', 'Anike', 'Ak', 'Alhaja']
+
+
+        // console.log(class2.length)
+        console.log(class2.pop())
+        let newClass2 = class2;
+        console.log(newClass2)
+
+        console.log(newClass2.shift())
+        let updatedClass = newClass2;
+        console.log(updatedClass)
+
+        console.log(updatedClass[0])
+        updatedClass.push('Wale')
+        console.log(updatedClass);
+        updatedClass.unshift('josh');
+        console.log(updatedClass);
+        updatedClass.splice(4,3,'joy', 'funke', 'dele', 'ayo');
+        console.log(updatedClass);
+        
+        let fruits = ['banana', 'orange', 'apple', 'mango']
+        let num = [1,2,3,4,5]
+        let newfruits = fruits.concat(num)
+        console.log(newfruits)
+
+
+        let stationaries = ['pen', `pencil`, `ruler`,`eraser`,`biro`]  
+        let newstationaries = stationaries.slice(2,3)
+        console.log(newstationaries)
+        
+        
+    </script>
+</body>
+</html>

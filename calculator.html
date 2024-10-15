@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto repeat(5, 80px);
+            grid-gap: 10px;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        #display {
+            grid-column: span 4;
+            background-color: #333333;
+            color: white;
+            font-size: 2em;
+            text-align: right;
+            padding: 20px;
+        }
+
+        button {
+            font-size: 1.5em;
+            border: none;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:active {
+            background-color: #ccc;
+        }
+
+        button.divide,
+        button.multiply,
+        button.subtract,
+        button.add,
+        button.equals {
+            background-color: #ff9500;
+            color: white;
+        }
+
+        button.zero {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div id="display">0</div>
+        <button onclick="execute(clr)" class="clear">AC</button>
+        <button onclick="display(-)" class="plus-minus">±</button>
+        <button onclick="execute(%)" class="percent">%</button>
+        <button onclick="execute(/)" class="divide">÷</button>
+
+        <button onclick="display(7)" class="seven">7</button>
+        <button onclick="display(8)" class="eight">8</button>
+        <button onclick="display(9)" class="nine">9</button>
+        <button onclick="execute(*)" class="multiply">×</button>
+
+        <button onclick="display(4)" class="four">4</button>
+        <button onclick="display(5)" class="five">5</button>
+        <button onclick="display(6)" class="six">6</button>
+        <button onclick="execute(-)" class="subtract">−</button>
+
+        <button onclick="display(1)" class="one">1</button>
+        <button onclick="display(2)" class="two">2</button>
+        <button onclick="display(3)" class="three">3</button>
+        <button onclick="execute(+)" class="add">+</button>
+
+        <button onclick="display(0)" class="zero">0</button>
+        <button onclick="display(.)" class="decimal">.</button>
+        <button onclick="execute(=)" class="equals">=</button>
+    </div>
+
+
+    <!-- <div class="calculator">
+        <button onclick="display(0)">0</button>
+        <button onclick="display(1)">1</button>
+        <button onclick="display(2)">2</button>
+        <button onclick="display(3)">3</button><br>
+        <button onclick="display(4)">4</button>
+        <button onclick="display(5)">5</button>
+        <button onclick="display(6)">6</button>
+        <button onclick="display(7)">7</button><br>
+        <button onclick="display(8)">8</button>
+        <button onclick="display(9)">9</button>
+        <button onclick="execute(+)">+</button>
+        <button onclick="execute(-)">-</button><br>
+        <button onclick="execute(*)">x</button>
+        <button onclick="execute(=)">=</button>
+        <button>c</button> -->
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

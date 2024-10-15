@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="here"></div>
+
+    <table>
+        <tr id="row"></tr>
+    </table>
+
+    <script>
+
+        for(let a = 0; a<=12; a++){
+            let cell = `<td> <b>Multiplication table${a}</b><br>`
+            for(let b = 0; b <=12; b++){
+                cell += `${a} x ${b} = ${a*b}<br>`
+            }
+            cell += `</td>`
+            row.innerHTML += cell
+        }
+
+        for (let digit = 1000; digit >= 0; digit--) {
+            if (digit >= 2) {
+                here.innerHTML += `<p>${digit} bottle of beer on the wall, ${digit} bottle of beer on the wall,<br>take one down and pass it around, ${digit - 1} bottles of beer of beer on the wall <br></p>`
+            }
+            else if (digit == 1) {
+                here.innerHTML += `<p>${digit} bottle of beer on the wall, ${digit} bottle of beer on the wall,<br> take one down, pass it around, no more bottles of beer of beer on the wall</p>`
+            }
+            else if(digit ==  0) {
+                here.innerHTML += `<p>No more bottles of beer on the wall, no more bottles of beer on the wall.<br> Go to the store and buy some more, 99 bottles of beer on the wall</p>`
+            }
+            else{
+                here.innerHTML += `nothing`
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grade system</h1>
+    <p id="result">This is your result</p>
+
+
+
+    <h1>Odd Number</h1>
+    <p id="odd-number"></p>
+
+
+    <input type="number" name="" id="shalewa" placeholder="input here">
+    <!-- <input type="text" name="" id="alhaja" placeholder="input here"> -->
+    <button onclick="caller()">Submit</button>
+    
+    <h1>Even Number</h1>
+    <p id="even-number"></p>
+
+    <script>
+
+        function caller() {
+            let number= shalewa.value
+            console.log(shalewa.value);
+            if (number %2 == 0){
+            even-number.innerHTML = '<p>This is an even number</p>'
+         }
+         else {
+            document.getElementById('even-number').innerHTML = '<p>This is an Odd number</p>'
+         }
+
+            // console.log(document.getElementById('alhaja').value);    
+        }
+
+
+        let score = 72
+
+        if (score >= 0 && score < 40){
+            document.getElementById('result').innerHTML = '<p style="color: red;">Bad result, You failed</p>'
+        }
+        else if (score >= 40 && score < 46){
+            document.getElementById('result').innerHTML = '<p style="color: yellow;">Not Good enough, E </p>'
+        }
+         else if (score >= 46 && score < 51){
+            document.getElementById('result').innerHTML = '<p style="color: black;">You can do better, D </p>'
+         }
+         else if (score >= 51 && score < 60){
+            document.getElementById('result').innerHTML = '<p style="color: black;">Fair, C </p>'
+         }
+         else if (score >= 61 && score < 70){
+            document.getElementById('result').innerHTML = '<p style="color: blue;">Good, B </p>'
+         }
+         else if (score >= 70 && score < 100){
+            document.getElementById('result').innerHTML = '<p style="color: green;">Excellent, A</p>'
+         }
+         else {
+            document.getElementById('result').innerHTML = '<p style="color: red;">Invalid errors</p>'
+         }
+
+
+        let digit= 21
+
+         if (digit %2 == 1){
+            document.getElementById('odd-number').innerHTML = '<p>This is an odd number</p>'
+         }
+         else {
+            document.getElementById('odd-number').innerHTML = '<p>This is an even number</p>'
+         }
+    </script>
+</body>
+</html>

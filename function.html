@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .holder{
+            font-family: cursive;
+            border: 0.2rem dashed;
+            width: 30%;
+            margin: 6rem auto;
+            h1{
+                font-weight: 500;
+                text-align: center;
+            }
+            input,button{
+                display: block;
+                margin: 10px auto;
+            }
+            h3{
+               text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="holder">
+        <h1>Number Alert</h1>
+        <input type="number" name="" id="identify" placeholder="Input number here">
+        <button onclick="fetch()">Check</button>
+        <h3 id="result">Result</h3>
+
+    </div>
+    
+    <script>
+        function fetch() {
+            console.log(identify.value)
+            if(identify.value %3 == 0 && identify.value %5 ==0){
+                result.innerHTML = '<h3 style="color: Green;">Fizz Buzz</h3>'
+            }
+            else if (identify.value %3 == 0){
+                result.innerHTML = '<h3 style="color: yellow;">Fizz</h3>'
+            }
+            else if (identify.value %5 == 0){
+                result.innerHTML = '<h3 style="color: blue;">Buzz</h3>'
+            }
+            else{
+                result.innerHTML = '<h3 style="color: red;">Invalid Entry</h3>'
+            }
+        }
+    </script>
+</body>
+</html>
