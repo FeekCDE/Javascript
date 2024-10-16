@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <textarea name="" id="charact" cols="30" rows="10" onkeyup="checkwords()"></textarea>
+    <p><code id="num">0</code> Words</p>
+
 
 
     <script>
-        var names = 'Judge'
+        // var names = 'Judge'
+        // console.log(names.length)
+        // console.log(names.indexOf('u'))
+        // console.log(names.charAt(4))
 
-        console.log(names.length)
-        console.log(names.indexOf('u'))
-        console.log(names.charAt(4))
-        
+        function checkwords() {
+            let NewCh = charact.value;
+            // console.log(NewCh.lenght);
+            console.log(`${NewCh.trim('').split(' ')}`);
+            num.innerHTML = NewCh.trim('').split('').length
+        }
     </script>
+
 </body>
+
 </html>
