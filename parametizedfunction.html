@@ -8,13 +8,15 @@
 <body>
     
 
-
+    <input type="text" id="namer" placeholder="input name here" autofocus>
+    <button onclick="greet(any)">Greet</button>
 
 
     <script>
-        var sade = 'fuel'
-
-        sade.
+        let nameGreet = namer.value;
+        function greet(any){
+            alert(`Hello ${nameGreet}, How are you doing`)
+        }
     </script>
 </body>
 </html>
