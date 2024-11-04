@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="answer()">click</button>
+    <div id="cont"></div>
+
+
+    <script>
+        const click = (a,b)=>{
+            return(a*b)
+        }
+
+        const answer=()=>{
+            console.log(click(5,6))
+        }
+
+        let students = ['david', 'ayo', 'zaidat', 'clement', 'anike','mary', 'tao']
+        students.map((student,index)=>{
+            console.log(`<p>${index + 1} ${student}</p>`);
+            cont.innerHTML += `<p>${index + 1} ${student}</p>`
+        })
+        let newStudents = students.filter((startLetter) => startLetter.startsWith('c'))
+        console.log(newStudents)
+    </script>
+</body>
+</html>

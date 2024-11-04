@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="InputTodo" placeholder="Input todo here" autofocus>
+    <button onclick="submit()">Submit</button>
+    <p id="todoarea"></p>
+    <button onclick="deleteFirst()">Delete First</button>
+    <button onclick="deleteLast()">Delete Last</button>
+    
+    <script>
+        let todoArray = []
+
+        function submit(){
+            let Todo = InputTodo.value;
+         todoArray.push(Todo)
+         todoarea.innerHTML= ' '
+            for (let i = 0; i < todoArray.length; i++) {
+               document.getElementById('todoarea').innerHTML += `${i+1}. ${todoArray[i]}<br>`;
+                
+            }
+
+            console.log(todoArray);
+
+        }
+
+        function deleteFirst(){
+            todoArray.shift()
+            console.log(todoArray)
+            todoarea.innerHTML= ' '
+            for (let i = 0; i < todoArray.length; i++) {
+               document.getElementById('todoarea').innerHTML += `${i+1}. ${todoArray[i]}<br>`;
+                
+            }
+
+
+        }
+
+        function deleteLast(){
+            todoArray.pop()
+            console.log(todoArray)
+            todoarea.innerHTML= ' '
+            for (let i = 0; i < todoArray.length; i++) {
+               document.getElementById('todoarea').innerHTML += `${i+1}. ${todoArray[i]}<br>`;
+                
+            }
+
+
+        }
+    </script>
+</body>
+</html>

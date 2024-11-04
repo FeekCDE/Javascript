@@ -15,15 +15,19 @@
         <!-- <option value=""></option> -->
     </select>
     <input type="number" name="" id="second" placeholder="second number">
-    <button>Calculate</button>
+    <button onclick="calculat()">Calculate</button>
     <code id="result"></code>
 
     <script>
 
-       function calculate(){
+       function calculat(){
         let firstNum = (document.getElementById('first').value)
         let secondNum = (document.getElementById('second').value)
         if(operator.vlaue= +){
+            let result = (firstNum + secondNum)
+            result.innerHTML = `${result}`
+        }else{
+            console.log('what is this')
 
         }
        }

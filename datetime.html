@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="fullTime"></p>
+    <p id="fullDate"></p>
+    <p id="timee"></p>
+    <p id="count">0</p>
+    <p id="secs">0</p>
+    <button onclick="updateTime()">Start</button>
+    <button onclick="stopTime()">Stop</button>
+    <button onclick="reset()">reset</button>
+
+    <p id="countdownn">100</p>
+    <button onclick="countdown()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="resetit()">Reset</button>
+
+
+    <script>
+      let increase;
+      let decrease;
+      let countt = Number(count.innerHTML);
+      secss = Number(secs.innerHTML);
+      let class1 = new Date();
+      console.log(class1);
+      fullTime.innerHTML = class1;
+
+      let datee = class1.toLocaleDateString("en-EG");
+      console.log(datee);
+      fullDate.innerHTML = datee;
+
+    //   let time = class1.toLocaleTimeString("en-EG");
+    //   console.log(time);
+    //   timee.innerHTML = time;
+
+      const updateTime = () => {
+        increase = setInterval(() => {
+          countt += 1;
+          count.innerHTML = countt
+          secsCount()
+        }
+        , 10);
+      };
+
+      const secsCount = () =>{
+        if (countt === 100){
+            countt = 0
+            secss += 1
+            secs.innerHTML = secss
+        }
+      }
+
+      const stopTime = () => {
+        clearInterval(increase);
+      };
+
+      const reset = () => {
+        count.innerHTML = 0;
+        secs.innerHTML = 0;
+      };
+
+      const increaseTime = () => {
+        let nowTime =new Date()
+
+        timee.innerHTML = `${nowTime.toLocaleTimeString()}`;
+        
+      };
+
+      const countdown =()=>{
+        decrease = setInterval(() => {
+       let contd = countdownn.innerHTML
+       contd -= 1
+       countdownn.innerHTML = contd   
+        }, 1000);
+      }
+
+      const stop =()=>{
+        clearInterval(decrease)
+      }
+
+      const resetit =()=>{
+        countdownn.innerHTML = 100
+      }
+
+    
+   
+      setInterval(increaseTime, 1000)
+      
+
+      // ()=>
+      const nameOfFunction = () => {};
+      // function nameOfFunction
+    </script>
+  </body>
+</html>

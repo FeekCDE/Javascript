@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="greeting"></p>
+    <input type="text" name="" id="userInp" placeholder="Username">
+    <button onclick="save()">Save</button>
+    <button onclick="logOut()">remove</button>
+
+    <script>
+
+        function save(){
+            //save use localstorage.setitem()
+            //get
+            //remove
+
+            let username = userInp.value;
+            localStorage.setItem('name', username)
+            localStorage.setItem('height', '6ft')
+            getName()
+        }
+        
+        function getName(){
+            greeting.innerHTML = `Welcome ${localStorage.getItem('name')}`
+        }
+
+        function logOut(){
+            localStorage.clear();
+        }
+    </script>
+</body>
+</html>
